@@ -1,0 +1,267 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul > li,
+li {
+  list-style: none;
+  display: flex;
+  gap: 10px;
+}
+
+/*---------------------- Header Styles ----------------------------------------*/
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 4rem;
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.menu-item {
+  margin-left: 4rem;
+  text-decoration: none;
+  color: #343a40;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.logo > img {
+  margin-left: 4rem;
+  width: 100px;
+  height: auto;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+.nav-item {
+  text-decoration: none;
+  color: #343a40;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.menu-item:hover,
+.nav-item:hover {
+  color: green;
+  cursor: pointer;
+}
+
+/*---------------------- Footer Styles ----------------------------------------*/
+
+/* section 1 */
+
+.footer-section1 {
+  background-color: white;
+  padding: 2rem 8rem;
+  /* text-align: center; */
+  border-top: 1px solid #dee2e6;
+  border: 1px solid black;
+  color: green;
+  height: 250px;
+  display: grid;
+}
+.share-items {
+  display: flex;
+  justify-content: flex-start;
+  gap: 1rem;
+  align-items: flex-end;
+}
+
+.footer-logo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* background:red; */
+  font-size: 1.5rem;
+  font-weight: bolder;
+}
+.footer-logo > img {
+  width: 100px;
+  height: auto;
+}
+
+/* section 2 */
+
+.footer-section2-row {
+  background-color: #f8f9fa;
+  padding: 1rem 4rem;
+  text-align: left;
+  border-top: 1px solid #dee2e6;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+  font-size: 18px;
+  /* letter-spacing: 1px; */
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.col-group:hover {
+  color: green;
+  cursor: pointer;
+}
+
+/* Footer section */
+.box {
+  height: 100px;
+  width: 100px;
+  background-color: red;
+}
+hr {
+  border: 1px solid black;
+}
+
+/* Footer image */
+.footer-image {
+  /* text-align: center; */
+  /* padding: 2rem 0; */
+  width: 100%;
+  height: 400px;
+  background-image: url("./asserts/rolex-header-3.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+  color: white;
+  font-weight: bold;
+}
+
+/* Footer section 3 */
+.footer-section3 {
+  background-color: #f8f9fa;
+  padding: 1rem 4rem;
+  text-align: center;
+  border-top: 1px solid #dee2e6;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* ---------------- Main -------------------- */
+
+.video-container {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Sets height to 100% of the device viewport height */
+    background-attachment: fixed;
+}
+
+.video-container video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Forces video to cover the area without distortion (crops edges if ratios differ) */
+}
+
+
+.video-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2; /* Forces text to layer over the video */
+  
+  /* Flexbox settings to center content perfectly */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff; /* White text for contrast */
+  font-family: sans-serif;
+  background: rgba(0, 0, 0, 0.2); /* Optional: Darkens video slightly for text readability */
+}
+
+/* Optional typography styling for a luxury brand look */
+.subtitle {
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.title {
+  font-size: 3.5rem;
+  font-weight: 300;
+  margin-bottom: 2rem;
+}
+
+.cta-btn {
+  padding: 0.75rem 2.5rem;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  
+  /* Makes the button perfectly rounded */
+  border-radius: 50px; 
+  
+  /* Luxury style: Transparent background with a clean white border */
+  background-color: transparent;
+  color: #fff;
+  border: 1.5px solid #fff;
+  
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Smooth hover transition */
+.cta-btn:hover {
+  background-color: #fff;
+  color: #000; /* Inverts text color to black when background fills white */
+  transform: translateY(-2px); /* Subtle hover lift effect */
+}
+
+
+  /* 3-COLUMN IMAGE GRID STYLES */
+    .grid-section {
+      max-width: 1200px;
+      margin: 120px auto; /* Large margin ensures space to scroll down and trigger AOS */
+      padding: 0 20px;
+    }
+
+    .image-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr); /* Exactly 3 equal columns */
+      gap: 30px; /* Space between columns */
+    }
+
+    .grid-card {
+      background: #fdfdfd;
+      border-radius: 4px;
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    }
+
+    .grid-card img {
+      width: 100%;
+      height: 750px;
+      object-fit: cover; /* Prevents image distortion */
+      display: block;
+    }
