@@ -5,10 +5,13 @@
 }
 
 ul > li,
-li {
+li,
+li > a {
   list-style: none;
   display: flex;
   gap: 10px;
+  text-decoration: none;
+  color: #343a40;
 }
 
 /*---------------------- Header Styles ----------------------------------------*/
@@ -108,13 +111,36 @@ nav ul {
   /* letter-spacing: 1px; */
 }
 
+.col-group h2 {
+  max-width: 300px;
+  overflow-wrap: break-word;
+}
 .col {
   display: flex;
   flex-direction: column;
   gap: 1rem;
 }
 
-.col-group:hover {
+.col-group ul li {
+  margin-bottom: 12px;
+}
+
+/* Heading hover */
+.col-group h3:hover {
+  color: green;
+  cursor: pointer;
+}
+.col-group h2:hover {
+  color: green;
+  cursor: pointer;
+}
+.col-group h4:hover {
+  color: green;
+  cursor: pointer;
+}
+
+/* Individual list hover */
+.col-group ul li a:hover {
   color: green;
   cursor: pointer;
 }
@@ -153,12 +179,95 @@ hr {
 /* Footer section 3 */
 .footer-section3 {
   background-color: #f8f9fa;
-  padding: 1rem 4rem;
-  text-align: center;
+  padding: 1.5rem 4rem;
   border-top: 1px solid #dee2e6;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 2rem;
+}
+
+/* Language */
+.footer-language {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  white-space: nowrap;
+}
+
+/* Legal links */
+.footer-legal ul {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.footer-legal ul li a {
+  text-decoration: none;
+  color: #343a40;
+  transition: color 0.3s ease;
+}
+
+.footer-legal ul li a:hover {
+  color: green;
+}
+
+/* Settings */
+.footer-settings {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.btn-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  white-space: nowrap;
+}
+
+.btn-group button {
+  width: 35px;
+  height: 18px;
+  border: 1px solid #777;
+  border-radius: 20px;
+  background-color: #ddd;
+  cursor: pointer;
+}
+
+/* Language hover */
+.footer-language {
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.footer-language:hover {
+  color: green;
+}
+
+/* Legal links hover */
+.footer-legal ul li a {
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.footer-legal ul li a:hover {
+  color: green;
+}
+
+/* Settings hover */
+.btn-group {
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.btn-group:hover {
+  color: green;
+}
+
+.btn-group button {
+  cursor: pointer;
 }
 
 /* ---------------- Main -------------------- */
@@ -167,7 +276,7 @@ hr {
   position: relative;
   width: 100%;
   height: 100vh; /* Sets height to 100% of the device viewport height */
-    background-attachment: fixed;
+  background-attachment: fixed;
 }
 
 .video-container video {
@@ -179,7 +288,6 @@ hr {
   object-fit: cover; /* Forces video to cover the area without distortion (crops edges if ratios differ) */
 }
 
-
 .video-overlay {
   position: absolute;
   top: 0;
@@ -187,7 +295,7 @@ hr {
   width: 100%;
   height: 100%;
   z-index: 2; /* Forces text to layer over the video */
-  
+
   /* Flexbox settings to center content perfectly */
   display: flex;
   flex-direction: column;
@@ -196,7 +304,12 @@ hr {
   text-align: center;
   color: #fff; /* White text for contrast */
   font-family: sans-serif;
-  background: rgba(0, 0, 0, 0.2); /* Optional: Darkens video slightly for text readability */
+  background: rgba(
+    0,
+    0,
+    0,
+    0.2
+  ); /* Optional: Darkens video slightly for text readability */
 }
 
 /* Optional typography styling for a luxury brand look */
@@ -218,15 +331,15 @@ hr {
   font-size: 0.9rem;
   text-transform: uppercase;
   letter-spacing: 2px;
-  
+
   /* Makes the button perfectly rounded */
-  border-radius: 50px; 
-  
+  border-radius: 50px;
+
   /* Luxury style: Transparent background with a clean white border */
   background-color: transparent;
   color: #fff;
   border: 1.5px solid #fff;
-  
+
   cursor: pointer;
   transition: all 0.3s ease-in-out;
 }
@@ -238,30 +351,29 @@ hr {
   transform: translateY(-2px); /* Subtle hover lift effect */
 }
 
+/* 3-COLUMN IMAGE GRID STYLES */
+.grid-section {
+  max-width: 1200px;
+  margin: 120px auto; /* Large margin ensures space to scroll down and trigger AOS */
+  padding: 0 20px;
+}
 
-  /* 3-COLUMN IMAGE GRID STYLES */
-    .grid-section {
-      max-width: 1200px;
-      margin: 120px auto; /* Large margin ensures space to scroll down and trigger AOS */
-      padding: 0 20px;
-    }
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Exactly 3 equal columns */
+  gap: 30px; /* Space between columns */
+}
 
-    .image-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr); /* Exactly 3 equal columns */
-      gap: 30px; /* Space between columns */
-    }
+.grid-card {
+  background: #fdfdfd;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
 
-    .grid-card {
-      background: #fdfdfd;
-      border-radius: 4px;
-      overflow: hidden;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-    }
-
-    .grid-card img {
-      width: 100%;
-      height: 750px;
-      object-fit: cover; /* Prevents image distortion */
-      display: block;
-    }
+.grid-card img {
+  width: 100%;
+  height: 750px;
+  object-fit: cover; /* Prevents image distortion */
+  display: block;
+}
